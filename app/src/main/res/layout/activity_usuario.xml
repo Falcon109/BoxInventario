@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Usuario">
+
+    <ImageButton
+        android:id="@+id/volver3"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="331dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="volver"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/volver_foreground" />
+
+    <ImageView
+        android:id="@+id/IconoAvatar"
+        android:layout_width="204dp"
+        android:layout_height="206dp"
+        android:layout_marginStart="143dp"
+        android:layout_marginTop="144dp"
+        android:layout_marginEnd="160dp"
+        android:layout_marginBottom="43dp"
+        android:adjustViewBounds="false"
+        android:background="@color/color001"
+        android:contentDescription="@string/Usuario"
+        android:cropToPadding="false"
+        android:saveEnabled="false"
+        app:layout_constraintBottom_toTopOf="@+id/IngresarNombre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.416"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/usuario_foreground" />
+
+    <TextView
+        android:id="@+id/IngresarNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="65dp"
+        android:layout_marginEnd="66dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/IngresarNombre"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/NombreUsuario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/IconoAvatar" />
+
+    <EditText
+        android:id="@+id/NombreUsuario"
+        android:layout_width="259dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="32dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/Nombre"
+        app:layout_constraintBottom_toTopOf="@+id/GuardarNombre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/GuardarNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="118dp"
+        android:layout_marginEnd="119dp"
+        android:layout_marginBottom="116dp"
+        android:text="@string/GuardarNombre"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

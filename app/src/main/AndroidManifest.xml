@@ -12,6 +12,15 @@
         android:theme="@style/Theme.BoxInventario"
         tools:targetApi="31">
         <activity
+            android:name=".Usuario"
+            android:exported="false" />
+        <activity
+            android:name=".Recordatorios"
+            android:exported="false" />
+        <activity
+            android:name=".ApartadoLugarDeInteres"
+            android:exported="false" />
+        <activity
             android:name=".CreacionLista"
             android:exported="false" />
         <activity

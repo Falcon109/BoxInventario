@@ -17,4 +17,16 @@
     <string name="NombreparaLista">Nombre de la lista</string>
     <string name="BotonNombreLista">Guardar Lista</string>
 
+    <string name="IngreseLugar">Ingrese el Lugar de interes</string>
+    <string name="Nombreparalugardeintes">Nombre del lugar de interes</string>
+    <string name="Linkdelugardeintes">Link de google maps</string>
+    <string name="BotonLugarinteres">Guardar Lugar</string>
+
+    <string name="Recordatorio">Recordatorio</string>
+
+    <string name="Usuario">Usuario</string>
+    <string name="IngresarNombre">Ingrese su nombre</string>
+    <string name="Nombre">Su Nombre</string>
+    <string name="GuardarNombre">Guardar Nombre</string>
+
 </resources>

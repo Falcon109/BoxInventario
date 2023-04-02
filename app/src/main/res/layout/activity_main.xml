@@ -14,7 +14,7 @@
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:backgroundTint="@color/color002"
+        android:backgroundTint="#0075644B"
         android:contentDescription="Usuario"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -37,9 +37,9 @@
         android:id="@+id/TituloMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="76dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="77dp"
+        android:layout_marginEnd="117dp"
         android:layout_marginBottom="27dp"
         android:text="@string/TituloMenu"
         android:textAlignment="center"
@@ -47,21 +47,10 @@
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/ApartadoListas"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.727"
         app:layout_constraintStart_toEndOf="@+id/imageButton4"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:backgroundTint="@color/color003"
-        android:contentDescription="Menu"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/lista_foreground" />
 
     <ImageButton
         android:id="@+id/BotonLista"
@@ -136,5 +125,19 @@
         app:layout_constraintStart_toEndOf="@+id/BotonLugares"
         app:layout_constraintTop_toBottomOf="@+id/ApartadoLugares"
         app:srcCompat="@drawable/agregarlugar_foreground" />
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="77dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="316dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/color002"
+        android:contentDescription="BotonNotificaciones"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/notificaciones_foreground" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
