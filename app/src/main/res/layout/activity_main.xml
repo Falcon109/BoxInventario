@@ -8,40 +8,60 @@
     android:background="@color/color003"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:id="@+id/TiTulo_Actividades"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:background="@color/color001"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/color002"
+        android:contentDescription="Usuario"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/TituloMenu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/TituloMenu"
-            android:textAlignment="center"
-            android:textAllCaps="false"
-            android:textSize="34sp"
-            android:textStyle="bold" />
-    </LinearLayout>
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/usuario_foreground" />
 
     <TextView
         android:id="@+id/ApartadoListas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="29dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="27dp"
         android:layout_marginEnd="216dp"
         android:text="@string/TituloLista"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TiTulo_Actividades" />
+        app:layout_constraintTop_toBottomOf="@+id/TituloMenu" />
+
+    <TextView
+        android:id="@+id/TituloMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="77dp"
+        android:layout_marginBottom="27dp"
+        android:text="@string/TituloMenu"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/ApartadoListas"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton2"
+        app:layout_constraintStart_toEndOf="@+id/imageButton4"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/color003"
+        android:contentDescription="Menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/lista_foreground" />
 
     <ImageButton
         android:id="@+id/BotonLista"
@@ -69,7 +89,7 @@
         android:saveEnabled="false"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ApartadoLugares"
-        app:srcCompat="@drawable/articulo_foreground" />
+        app:srcCompat="@drawable/lugar_foreground" />
 
     <TextView
         android:id="@+id/ApartadoLugares"
@@ -115,6 +135,6 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/BotonLugares"
         app:layout_constraintTop_toBottomOf="@+id/ApartadoLugares"
-        app:srcCompat="@drawable/agregar_foreground" />
+        app:srcCompat="@drawable/agregarlugar_foreground" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
