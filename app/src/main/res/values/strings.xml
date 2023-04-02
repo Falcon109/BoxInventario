@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">BoxInventario</string>
+    <string name="app_name">Box Inventario</string>
+
+    <string name="TituloMenu">Inventario</string>
+    <string name="TituloLista">Lista de productos</string>
+    <string name="TituloUbicaciones">Lista de lugares de interes</string>
+    <string name="BotonLista">Boton de lista</string>
+    <string name="BotonAgregarLista">Boton agregar lista</string>
+    <string name="BotonLugares">Boton de lugar</string>
+    <string name="BotonAgregarLugares">Boton agregar lista</string>
+
 </resources>
