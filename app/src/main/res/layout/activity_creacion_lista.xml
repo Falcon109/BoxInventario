@@ -15,6 +15,7 @@
         android:layout_marginEnd="343dp"
         android:background="#00FFFFFF"
         android:contentDescription="volver"
+        android:onClick="VolverMenu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -64,5 +65,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/IngresoNombreLista" />
 </androidx.constraintlayout.widget.ConstraintLayout>

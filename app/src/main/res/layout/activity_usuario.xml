@@ -15,6 +15,7 @@
         android:layout_marginEnd="331dp"
         android:background="#00FFFFFF"
         android:contentDescription="volver"
+        android:onClick="VolverMenu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,6 +40,7 @@
         app:layout_constraintHorizontal_bias="0.416"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.36"
         app:srcCompat="@drawable/usuario_foreground" />
 
     <TextView
@@ -68,18 +70,21 @@
         android:text="@string/Nombre"
         app:layout_constraintBottom_toTopOf="@+id/GuardarNombre"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/IngresarNombre" />
 
     <Button
         android:id="@+id/GuardarNombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="118dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="119dp"
         android:layout_marginBottom="116dp"
         android:text="@string/GuardarNombre"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NombreUsuario" />
 </androidx.constraintlayout.widget.ConstraintLayout>
