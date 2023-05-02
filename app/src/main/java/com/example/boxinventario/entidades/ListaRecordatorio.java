@@ -1,4 +1,4 @@
-package com.example.boxinventario;
+package com.example.boxinventario.entidades;
 
 public class ListaRecordatorio {
 

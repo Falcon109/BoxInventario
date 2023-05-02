@@ -1,32 +1,47 @@
 <resources>
     <string name="app_name">Box Inventario</string>
 
-    <string name="TituloMenu">Inventario</string>
+    <string name="TituloMenu">Menu</string>
 
+    <string name="Articulos">Articulos</string>
+    <string name="Listas">Listas</string>
+    <string name="Lugaresinteres">Lugares de interes</string>
+    <string name="Recordatorios"></string>
 
-    <string name="TituloLista">Lista de productos</string>
-    <string name="TituloUbicaciones">Lista de lugares de interes</string>
-    <string name="BotonLista">Boton de lista</string>
-    <string name="BotonAgregarLista">Boton agregar lista</string>
-    <string name="BotonLugares">Boton de lugar</string>
-    <string name="BotonAgregarLugares">Boton agregar lista</string>
+    <string name="VentanaArticulos">Articulos</string>
+    <string name="botoncreararticulo">Crear un nuevo articulo</string>
 
-    <string name="NombreLista">Compras Casa</string>
+    <string name="VentanaListas">Listas</string>
+    <string name="botoncrearlista">Crear una nueva lista</string>
 
-    <string name="IngreseLista">Ingrese el Nombre de la lista</string>
-    <string name="NombreparaLista">Nombre de la lista</string>
-    <string name="BotonNombreLista">Guardar Lista</string>
+    <string name="VentanaLugar">Lugares de interes</string>
+    <string name="botoncrearlugarinteres">Crear un nuevo lugar de interes</string>
 
-    <string name="IngreseLugar">Ingrese el Lugar de interes</string>
-    <string name="Nombreparalugardeintes">Nombre del lugar de interes</string>
-    <string name="Linkdelugardeintes">Link de google maps</string>
-    <string name="BotonLugarinteres">Guardar Lugar</string>
+    <string name="VentanaRecordatorio">Recordatorio</string>
+    <string name="botoncrearrecordatorio">Crear un nuevo recordatorio</string>
 
-    <string name="Recordatorio">Recordatorio</string>
-
+    <string name="VentanaUsuario">Regristrar usuario</string>
     <string name="Usuario">Usuario</string>
-    <string name="IngresarNombre">Ingrese su nombre</string>
-    <string name="Nombre">Su Nombre</string>
-    <string name="GuardarNombre">Guardar Nombre</string>
+    <string name="IngresarNombre">Ingrese su nombre:</string>
+    <string name="Nombre">Su nombre</string>
+    <string name="IngresarCorreo">Ingrese su correo:</string>
+    <string name="Correo">Su correo</string>
+    <string name="Guardarsesion">Iniciar sesion</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
 
 </resources>

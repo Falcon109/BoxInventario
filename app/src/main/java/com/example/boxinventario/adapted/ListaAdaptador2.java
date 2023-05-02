@@ -1,4 +1,4 @@
-package com.example.boxinventario;
+package com.example.boxinventario.adapted;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -10,6 +10,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.boxinventario.entidades.ListaRecordatorio;
+import com.example.boxinventario.R;
 
 import java.util.List;
 
@@ -30,7 +33,7 @@ public class ListaAdaptador2 extends RecyclerView.Adapter<ListaAdaptador2.ViewHo
 
     @Override
     public ListaAdaptador2.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
-        View view = mInflater.inflate(R.layout.list_item_recordatorios,null);
+        View view = mInflater.inflate(R.layout.item_recordatorios,null);
         return new ListaAdaptador2.ViewHolder(view);
     }
 

@@ -8,6 +8,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.boxinventario.MainActivity;
+import com.example.boxinventario.R;
+import com.example.boxinventario.adapted.ListaAdaptador2;
+import com.example.boxinventario.entidades.ListaRecordatorio;
+import com.example.boxinventario.entidades.Usuario;
+
 import java.util.ArrayList;
 import java.util.List;
 

@@ -6,12 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class CreacionLista extends AppCompatActivity {
+public class ApartadoListas extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_creacion_lista);
+        setContentView(R.layout.activity_apartado_lista);
     }
 
     public void VolverMenu (View clic9) {

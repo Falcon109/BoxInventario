@@ -1,4 +1,4 @@
-package com.example.boxinventario;
+package com.example.boxinventario.entidades;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.boxinventario.MainActivity;
+import com.example.boxinventario.R;
 
 public class Usuario extends AppCompatActivity {
 

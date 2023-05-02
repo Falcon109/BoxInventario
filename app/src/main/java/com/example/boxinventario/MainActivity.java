@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.boxinventario.entidades.Usuario;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -23,13 +25,13 @@ public class MainActivity extends AppCompatActivity {
 
     //Metodo para ir a Lista creadas
     public void IrLista(View clic1) {
-        Intent IraLista = new Intent(this, ApartadoLista.class);
+        Intent IraLista = new Intent(this, ApartadoArticulos.class);
         startActivity(IraLista);
     }
 
     //Metodo para ir a creacion de listas
     public void IrCrearLista (View clic2) {
-        Intent IraCrearLista = new Intent(this, CreacionLista.class);
+        Intent IraCrearLista = new Intent(this, ApartadoListas.class);
         startActivity(IraCrearLista);
     }
 

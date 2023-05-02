@@ -6,51 +6,32 @@
     android:layout_height="match_parent"
     tools:context=".Recordatorios">
 
-    <TextView
-        android:id="@+id/nombredeLista"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="100dp"
-        android:text="@string/Recordatorio"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textSize="34sp"
-        android:textStyle="bold"
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="307dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="25dp"
+        android:text="@string/botoncrearrecordatorio"
+        app:layout_constraintBottom_toTopOf="@+id/listacuerpo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageButton"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="43dp"
-        android:layout_marginBottom="18dp"
-        android:backgroundTint="#0075644B"
-        android:contentDescription="Usuario"
-        android:onClick="IrUsuario"
-        app:layout_constraintBottom_toTopOf="@+id/volver2"
-        app:layout_constraintEnd_toStartOf="@+id/nombredeLista"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toEndOf="@+id/volver2"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/usuario_foreground" />
+        app:layout_constraintVertical_bias="0.166" />
 
     <ImageButton
         android:id="@+id/volver2"
         android:layout_width="52dp"
         android:layout_height="52dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginEnd="331dp"
+        android:layout_marginTop="12dp"
         android:background="#00FFFFFF"
         android:contentDescription="volver"
         android:onClick="VolverMenu"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.075"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/volver_foreground" />
 
     <androidx.recyclerview.widget.RecyclerView
