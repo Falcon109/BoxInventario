@@ -16,13 +16,13 @@ import com.example.boxinventario.R;
 
 import java.util.List;
 
-public class ListaAdaptador2 extends RecyclerView.Adapter<ListaAdaptador2.ViewHolder> {
+public class AdaptadorListas extends RecyclerView.Adapter<AdaptadorListas.ViewHolder> {
 
     private List<ListaRecordatorio> mData;
     private LayoutInflater mInflater;
     private Context context;
 
-    public  ListaAdaptador2(List<ListaRecordatorio> itemList, Context context){
+    public AdaptadorListas(List<ListaRecordatorio> itemList, Context context){
         this.mInflater = LayoutInflater.from(context);
         this.context = context;
         this.mData = itemList;
@@ -32,13 +32,13 @@ public class ListaAdaptador2 extends RecyclerView.Adapter<ListaAdaptador2.ViewHo
     public int getItemCount(){ return mData.size(); }
 
     @Override
-    public ListaAdaptador2.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
+    public AdaptadorListas.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
         View view = mInflater.inflate(R.layout.item_recordatorios,null);
-        return new ListaAdaptador2.ViewHolder(view);
+        return new AdaptadorListas.ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(final ListaAdaptador2.ViewHolder holder, final int position){
+    public void onBindViewHolder(final AdaptadorListas.ViewHolder holder, final int position){
         holder.bindData(mData.get(position));
     }
 

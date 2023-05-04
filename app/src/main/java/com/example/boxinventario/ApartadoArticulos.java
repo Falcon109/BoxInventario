@@ -6,12 +6,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
+import android.util.Log;
 import android.view.View;
 
 import com.example.boxinventario.adapted.AdaptadorProducto;
 import com.example.boxinventario.entidades.Producto;
 import com.example.boxinventario.entidades.Usuario;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -29,33 +32,35 @@ public class ApartadoArticulos extends AppCompatActivity {
 
     }
 
-    //Metodo para ir a crear Lugares de interes
-    public void VolverMenu (View clic7) {
-        Intent Volvermenu = new Intent(this, MainActivity.class);
-        startActivity(Volvermenu);
-    }
-
-    public void IrUsuario(View clic8) {
-        Intent IraUsuario = new Intent(this, Usuario.class);
-        startActivity(IraUsuario);
-    }
-
+    //new date
     public void init(){
         elementos = new ArrayList<>();
-        elementos.add(new Producto("#775447","Galletas", new Date(), "4", "1200", "jumbo","Cofis"));
-        elementos.add(new Producto("#775447","Bebidas", new Date(), "2", "2000", "jumbo","Gaseosas"));
-        elementos.add(new Producto("#775447","Papas", new Date(), "3", "1800", "jumbo","Cofis"));
-        elementos.add(new Producto("#775447","Carne", new Date(), "4", "5600", "jumbo","Canes"));
-        elementos.add(new Producto("#775447","Jugos", new Date(), "6", "2100", "jumbo","Liquidos"));
-        elementos.add(new Producto("#775447","Mayonesa", new Date(), "2", "3200", "jumbo","Agregados"));
-        elementos.add(new Producto("#775447","Confort", new Date(), "16", "12000", "jumbo","Otros"));
+        elementos.add(new Producto("#775447","Galletas", "12-23-31", "4", "1200", "jumbo","Cofis"));
+        elementos.add(new Producto("#775447","Bebidas", "12-23-31", "2", "2000", "jumbo","Gaseosas"));
+        elementos.add(new Producto("#775447","Papas", "12-23-31", "3", "1800", "jumbo","Cofis"));
+        elementos.add(new Producto("#775447","Carne", "12-23-31", "4", "5600", "jumbo","Canes"));
+        elementos.add(new Producto("#775447","Jugos", "12-23-31", "6", "2100", "jumbo","Liquidos"));
+        elementos.add(new Producto("#775447","Mayonesa", "12-23-31", "2", "3200", "jumbo","Agregados"));
+        elementos.add(new Producto("#775447","Confort", "12-23-31", "16", "12000", "jumbo","Otros"));
 
-        AdaptadorProducto adaptadorProducto = new AdaptadorProducto(elementos, this);
+        AdaptadorProducto adaptadorProducto = new AdaptadorProducto(elementos, this, new AdaptadorProducto.OnItemClickListener(){
+            @Override
+            public void onItemClick(Producto item) {
+                moveToDescription(item);
+            }
+        });
         RecyclerView recyclerView = findViewById(R.id.listacuerpo);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adaptadorProducto);
 
+
     }
+    public void moveToDescription(Producto item) {
+        Intent intent = new Intent(this, DescipcionProductos.class);
+        intent.putExtra("Producto", (Parcelable) item);
+        startActivity(intent);
+    }
+
 
 }

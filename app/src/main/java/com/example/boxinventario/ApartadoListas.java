@@ -13,10 +13,4 @@ public class ApartadoListas extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apartado_lista);
     }
-
-    public void VolverMenu (View clic9) {
-        Intent Volvermenu = new Intent(this, MainActivity.class);
-        startActivity(Volvermenu);
-    }
-
 }

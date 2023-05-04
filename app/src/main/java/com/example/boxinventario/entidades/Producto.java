@@ -5,23 +5,21 @@ import android.os.Parcelable;
 
 import androidx.annotation.NonNull;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Producto implements Parcelable {
+public class Producto implements  Serializable, Parcelable {
 
     public String color;
     public String nameproducto;
-
-    public Date fechaproducto;
+    //public Date fechaproducto;
+    public String fechaproducto;
     public String cantidad;
-
     public String precio;
-
     public String categoria;
-
     public String ubicacion;
 
-    public Producto(String color, String nameproducto, Date fechaproducto, String cantidad, String precio, String ubicacion, String categoria){
+    public Producto(String color, String nameproducto, String fechaproducto, String cantidad, String precio, String ubicacion, String categoria){
         this.color = color;
         this.nameproducto = nameproducto;
         this.fechaproducto = fechaproducto;
@@ -35,7 +33,7 @@ public class Producto implements Parcelable {
         categoria = in.readString();
         color = in.readString();
         nameproducto = in.readString();
-        fechaproducto = new Date(in.readString());
+        fechaproducto = in.readString();
         cantidad = in.readString();
         precio = in.readString();
         ubicacion = in.readString();
@@ -65,11 +63,11 @@ public class Producto implements Parcelable {
         this.nameproducto = nameproducto;
     }
 
-    public Date getFechaproducto() {
+    public String getFechaproducto() {
         return fechaproducto;
     }
 
-    public void setFechaproducto(Date fechaproducto) {
+    public void setFechaproducto(String fechaproducto) {
         this.fechaproducto = fechaproducto;
     }
 

@@ -25,6 +25,11 @@ public class Usuario extends AppCompatActivity {
 
     }
 
+    public void irmenu (View clic7) {
+        Intent Volvermenu = new Intent(this, MainActivity.class);
+        startActivity(Volvermenu);
+    }
+
     //Metodo para ir a crear Lugares de interes
     public void VolverMenu (View clic6) {
         Intent Volvermenu = new Intent(this, MainActivity.class);

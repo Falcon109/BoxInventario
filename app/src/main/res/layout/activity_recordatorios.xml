@@ -8,43 +8,29 @@
 
     <Button
         android:id="@+id/button4"
-        android:layout_width="307dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="18dp"
-        android:layout_marginBottom="25dp"
+        android:layout_width="342dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="16dp"
         android:text="@string/botoncrearrecordatorio"
-        app:layout_constraintBottom_toTopOf="@+id/listacuerpo"
+        app:layout_constraintBottom_toTopOf="@+id/cuerpoRecordatorio"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.555"
-        app:layout_constraintStart_toEndOf="@+id/volver2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.166" />
-
-    <ImageButton
-        android:id="@+id/volver2"
-        android:layout_width="52dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="12dp"
-        android:background="#00FFFFFF"
-        android:contentDescription="volver"
-        android:onClick="VolverMenu"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.075"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/volver_foreground" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/cuerpoRecordatorio"
-        android:layout_width="407dp"
-        android:layout_height="567dp"
+        android:layout_width="356dp"
+        android:layout_height="497dp"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="30dp"
         android:layout_marginEnd="1dp"
+        android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.452"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/volver2"
-        app:layout_constraintVertical_bias="0.272" />
+        app:layout_constraintTop_toBottomOf="@+id/button4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

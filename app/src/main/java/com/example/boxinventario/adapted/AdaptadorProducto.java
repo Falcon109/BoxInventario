@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ListAdapter;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
@@ -22,10 +23,16 @@ public class AdaptadorProducto extends RecyclerView.Adapter<AdaptadorProducto.Vi
     private LayoutInflater mInflater;
     private Context context;
 
-    public AdaptadorProducto(List<Producto> itemList, Context context){
+    final AdaptadorProducto.OnItemClickListener listener;
+    public interface OnItemClickListener {
+        void onItemClick(Producto item);
+    }
+
+    public AdaptadorProducto(List<Producto> itemList, Context context, AdaptadorProducto.OnItemClickListener listener) {
         this.mInflater = LayoutInflater.from(context);
         this.context = context;
         this.mData = itemList;
+        this.listener = listener;
     }
 
     @Override
@@ -67,6 +74,12 @@ public class AdaptadorProducto extends RecyclerView.Adapter<AdaptadorProducto.Vi
             ubicacion.setText(item.getUbicacion());
             precio.setText(item.getPrecio());
             categoria.setText(item.getCategoria());
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    listener.onItemClick(item);
+                }
+            });
         }
 
     }

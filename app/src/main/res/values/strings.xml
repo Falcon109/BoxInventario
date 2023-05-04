@@ -29,6 +29,8 @@
     <string name="Guardarsesion">Iniciar sesion</string>
     <string name="title_activity_settings">SettingsActivity</string>
 
+    <string name="DescripcionProducto">Descripcion</string>
+
     <!-- Preference Titles -->
     <string name="messages_header">Messages</string>
     <string name="sync_header">Sync</string>
