@@ -41,10 +41,10 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@color/articulo_background"
             android:drawableLeft="@drawable/articulo_foreground"
-            android:onClick="IrLista"
+            android:onClick="IrArticulos"
             android:text="@string/Articulos"
             android:textAlignment="textStart"
-            tools:cornerRadius="10dp" />
+            tools:cornerRadius="15dp" />
 
         <Button
             android:id="@+id/button5"
@@ -52,10 +52,10 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#A377B6"
             android:drawableLeft="@drawable/lista_foreground"
-            android:onClick="IrCrearLista"
+            android:onClick="IrLista"
             android:text="@string/Listas"
             android:textAlignment="textStart"
-            tools:cornerRadius="10dp" />
+            tools:cornerRadius="15dp" />
 
         <Button
             android:id="@+id/button6"
@@ -63,28 +63,25 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#AA96B3"
             android:drawableLeft="@drawable/lugar_foreground"
-            android:onClick="IrCrearLugarInteres"
+            android:onClick="IrLugarInteres"
             android:text="@string/Lugaresinteres"
             android:textAlignment="textStart"
-            tools:cornerRadius="10dp" />
+            tools:cornerRadius="15dp" />
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="76dp"
-        android:layout_height="85dp"
-        android:layout_marginEnd="36dp"
-        android:layout_marginBottom="39dp"
-        android:backgroundTint="@color/color003"
-        android:contentDescription="Boton de recordatorio"
-        android:drawableEnd="@drawable/notificaciones_foreground"
-        android:gravity="center|center_horizontal|center_vertical"
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="63dp"
+        android:layout_height="63dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginBottom="37dp"
+        android:clickable="true"
+        android:foregroundGravity="center"
         android:onClick="IrRecordatorios"
-        app:cornerRadius="100dp"
+        app:backgroundTint="@color/color003"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
-        app:layout_constraintVertical_bias="0.94" />
+        app:srcCompat="@drawable/notificaciones_foreground" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,22 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".entidades.Usuario">
 
-    <ImageButton
-        android:id="@+id/volver3"
-        android:layout_width="52dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="331dp"
-        android:background="#00FFFFFF"
-        android:contentDescription="volver"
-        android:onClick="VolverMenu"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/volver_foreground" />
-
     <ImageView
         android:id="@+id/IconoAvatar"
         android:layout_width="138dp"

@@ -23,28 +23,22 @@ public class MainActivity extends AppCompatActivity {
         startActivity(IraUsuario);
     }
 
-    //Metodo para ir a Lista creadas
-    public void IrLista(View clic1) {
-        Intent IraLista = new Intent(this, ApartadoArticulos.class);
+    //Metodo para ir a articulos
+    public void IrArticulos(View clic1) {
+        Intent IrArticulos = new Intent(this, ApartadoArticulos.class);
+        startActivity(IrArticulos);
+    }
+
+    //Metodo para ir a listas
+    public void IrLista(View clic2) {
+        Intent IraLista = new Intent(this, ApartadoListas.class);
         startActivity(IraLista);
     }
 
-    //Metodo para ir a creacion de listas
-    public void IrCrearLista (View clic2) {
-        Intent IraCrearLista = new Intent(this, ApartadoListas.class);
-        startActivity(IraCrearLista);
-    }
-
-    //Metodo para ir a Lugar de interes
-    /*public void IrLugarInteres (View clic3) {
-        Intent IraLugarInteres = new Intent(this, CreacionLista.class);
-        startActivity(IraCrear);
-    }*/
-
-    //Metodo para ir a crear Lugares de interes
-    public void IrCrearLugarInteres (View clic4) {
-        Intent IraCrearLugarInteres = new Intent(this, ApartadoLugarDeInteres.class);
-        startActivity(IraCrearLugarInteres);
+    //Metodo para ir a Lugares de interes
+    public void IrLugarInteres(View clic4) {
+        Intent IrLugarInteres = new Intent(this, ApartadoLugarDeInteres.class);
+        startActivity(IrLugarInteres);
     }
 
     //Metodo para Gestionar Recordatorios

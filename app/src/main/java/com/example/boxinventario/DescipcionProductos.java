@@ -2,12 +2,15 @@ package com.example.boxinventario;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.boxinventario.entidades.Producto;
+import com.example.boxinventario.entidades.Usuario;
 
 public class DescipcionProductos extends AppCompatActivity {
 
@@ -44,4 +47,10 @@ public class DescipcionProductos extends AppCompatActivity {
         numrfecha.setText(element.getFechaproducto());
         //((CharSequence)
     }
+
+    public void IraEditar(View clic) {
+        Intent IraEditar = new Intent(this, EditadEliminar.class);
+        startActivity(IraEditar);
+    }
+
 }

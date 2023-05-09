@@ -1,87 +1,65 @@
 package com.example.boxinventario.adapted;
 
 import android.content.Context;
-import android.graphics.Color;
-import android.graphics.PorterDuff;
+import android.database.sqlite.SQLiteDatabase;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.ListAdapter;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.boxinventario.entidades.Producto;
 import com.example.boxinventario.R;
 
-import java.util.List;
+import java.util.ArrayList;
 
-public class AdaptadorProducto extends RecyclerView.Adapter<AdaptadorProducto.ViewHolder> {
+public class AdaptadorProducto extends RecyclerView.Adapter<AdaptadorProducto.MyViewHolder> {
 
-    private List<Producto> mData;
-    private LayoutInflater mInflater;
     private Context context;
+    ArrayList<Producto> ProductosArrayList;
 
-    final AdaptadorProducto.OnItemClickListener listener;
-    public interface OnItemClickListener {
-        void onItemClick(Producto item);
+    SQLiteDatabase sqLiteDatabase;
+
+    public AdaptadorProducto(ArrayList<Producto> productos) {
+        this.ProductosArrayList = productos;
     }
 
-    public AdaptadorProducto(List<Producto> itemList, Context context, AdaptadorProducto.OnItemClickListener listener) {
-        this.mInflater = LayoutInflater.from(context);
-        this.context = context;
-        this.mData = itemList;
-        this.listener = listener;
+    @NonNull
+    @Override
+    public AdaptadorProducto.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_productos,parent,false);
+        return new MyViewHolder(view);
     }
 
     @Override
-    public int getItemCount(){ return mData.size(); }
+    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+        Producto producto = ProductosArrayList.get(position);
+        holder.Nombre.setText(producto .getNameproducto());
+        holder.Fecha.setText(producto.getFechaproducto());
+        holder.Cantidad.setText(producto.getCantidad());
+        holder.Precio.setText(producto.getPrecio());
+        holder.Categoria.setText(producto.getCategoria());
+        holder.Ubicacion.setText(producto.getUbicacion());
 
-    @Override
-    public AdaptadorProducto.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
-        View view = mInflater.inflate(R.layout.item_productos,null);
-        return new AdaptadorProducto.ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(final AdaptadorProducto.ViewHolder holder, final int position){
-        holder.bindData(mData.get(position));
+    public int getItemCount(){
+        return ProductosArrayList.size();
     }
 
-    public void setItem(List<Producto> item){ mData = item; }
-
-    public class ViewHolder extends RecyclerView.ViewHolder{
-        ImageView iconImagen;
-        TextView nombre, fecha, cantidad, ubicacion, precio, categoria;
-
-        ViewHolder(View itemView){
+    public class MyViewHolder extends RecyclerView.ViewHolder {
+        TextView Nombre , Ubicacion, Fecha, Cantidad, Precio, Categoria;
+        public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            iconImagen = itemView.findViewById(R.id.iconproducto);
-            nombre = itemView.findViewById(R.id.NameLista);
-            fecha = itemView.findViewById(R.id.fechacompra);
-            cantidad = itemView.findViewById(R.id.numerocantidadproducto);
-            ubicacion = itemView.findViewById(R.id.ubicacionlista);
-            precio = itemView.findViewById(R.id.numeroprecioproducto);
-            categoria = itemView.findViewById(R.id.nombrecategoriaproducto);
+            Nombre = (TextView)itemView.findViewById(R.id.NameLista);
+            Fecha = (TextView)itemView.findViewById(R.id.fechacompra);
+            Cantidad = (TextView)itemView.findViewById(R.id.numerocantidadproducto);
+            Precio = (TextView)itemView.findViewById(R.id.numeroprecioproducto);
+            Categoria = (TextView)itemView.findViewById(R.id.nombrecategoriaproducto);
+            Ubicacion = (TextView)itemView.findViewById(R.id.ubicacionlista);
         }
-
-        void bindData(final Producto item){
-            iconImagen.setColorFilter(Color.parseColor(item.getColor()), PorterDuff.Mode.SRC_IN);
-            nombre.setText(item.getNameproducto());
-            fecha.setText(String.valueOf(item.getFechaproducto()));
-            cantidad.setText(item.getCantidad());
-            ubicacion.setText(item.getUbicacion());
-            precio.setText(item.getPrecio());
-            categoria.setText(item.getCategoria());
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    listener.onItemClick(item);
-                }
-            });
-        }
-
     }
-
 }

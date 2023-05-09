@@ -12,13 +12,31 @@
         android:theme="@style/Theme.BoxInventario"
         tools:targetApi="31">
         <activity
+            android:name=".CrearProductos"
+            android:exported="false"
+            android:label="@string/CrearProducto"
+            android:parentActivityName=".ApartadoArticulos">
+            <meta-data
+            android:name="android.suport.PARENT_ACTIVITY"
+            android:value="ApartadoArticulos" />
+        </activity>
+        <activity
+            android:name=".EditadEliminar"
+            android:exported="false"
+            android:label="@string/EditarProducto"
+            android:parentActivityName=".DescipcionProductos">
+            <meta-data
+                android:name="android.suport.PARENT_ACTIVITY"
+                android:value="DescipcionProductos" />
+        </activity>
+        <activity
             android:name=".DescipcionProductos"
             android:exported="false"
             android:label="@string/DescripcionProducto"
             android:parentActivityName=".ApartadoArticulos">
             <meta-data
-            android:name="android.suport.PARENT_ACTIVITY"
-            android:value="ApartadoArticulos" />
+                android:name="android.suport.PARENT_ACTIVITY"
+                android:value="ApartadoArticulos" />
         </activity>
         <activity
             android:name=".SettingsActivity"
@@ -28,9 +46,10 @@
             android:name=".entidades.Usuario"
             android:exported="true"
             android:label="@string/VentanaUsuario">
-                <intent-filter>
-                 <action android:name="android.intent.action.MAIN" />
-                    <category android:name="android.intent.category.LAUNCHER" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
@@ -46,7 +65,8 @@
             android:name=".ApartadoLugarDeInteres"
             android:exported="false"
             android:label="@string/VentanaLugar"
-            android:parentActivityName=".MainActivity">>
+            android:parentActivityName=".MainActivity">
+            >
             <meta-data
                 android:name="android.suport.PARENT_ACTIVITY"
                 android:value="MainActivity" />
@@ -55,7 +75,8 @@
             android:name=".ApartadoListas"
             android:exported="false"
             android:label="@string/VentanaListas"
-            android:parentActivityName=".MainActivity">>
+            android:parentActivityName=".MainActivity">
+            >
             <meta-data
                 android:name="android.suport.PARENT_ACTIVITY"
                 android:value="MainActivity" />
@@ -71,8 +92,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="false">
-        </activity>
+            android:exported="false" />
     </application>
 
 </manifest>

@@ -6,37 +6,42 @@ import android.os.Parcelable;
 import androidx.annotation.NonNull;
 
 import java.io.Serializable;
-import java.util.Date;
 
 public class Producto implements  Serializable, Parcelable {
 
-    public String color;
-    public String nameproducto;
-    //public Date fechaproducto;
-    public String fechaproducto;
-    public String cantidad;
-    public String precio;
-    public String categoria;
-    public String ubicacion;
+    private int id;
+    private String nameproducto;
+    private String fechaproducto;
+    private String cantidad;
+    private String precio;
+    private String categoria;
+    private String ubicacion;
 
-    public Producto(String color, String nameproducto, String fechaproducto, String cantidad, String precio, String ubicacion, String categoria){
-        this.color = color;
+    public Producto(int id, String nameproducto, String fechaproducto, String cantidad, String precio, String categoria, String ubicacion) {
+        this.id = id;
         this.nameproducto = nameproducto;
         this.fechaproducto = fechaproducto;
         this.cantidad = cantidad;
         this.precio = precio;
-        this.ubicacion = ubicacion;
         this.categoria = categoria;
+        this.ubicacion = ubicacion;
     }
 
     protected Producto(Parcel in) {
         categoria = in.readString();
-        color = in.readString();
         nameproducto = in.readString();
         fechaproducto = in.readString();
         cantidad = in.readString();
         precio = in.readString();
         ubicacion = in.readString();
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getCategoria() {
@@ -45,14 +50,6 @@ public class Producto implements  Serializable, Parcelable {
 
     public void setCategoria(String categoria) {
         this.categoria = categoria;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
     }
 
     public String getNameproducto() {
@@ -103,13 +100,12 @@ public class Producto implements  Serializable, Parcelable {
 
     @Override
     public void writeToParcel(@NonNull Parcel parcel, int flags) {
-        parcel.writeString(color);
         parcel.writeString(this.nameproducto);
-        parcel.writeString(this.fechaproducto.toString());
-        parcel.writeString(this.cantidad);
+        parcel.writeString(this.fechaproducto);
+        parcel.writeString(String.valueOf(this.cantidad));
         parcel.writeString(this.ubicacion);
         parcel.writeString(this.categoria);
-        parcel.writeString(this.precio);
+        parcel.writeString(String.valueOf(this.precio));
     }
 
     public static final Creator<Producto> CREATOR = new Creator<Producto>() {

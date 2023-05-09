@@ -6,21 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".DescipcionProductos">
 
-    <Button
-        android:id="@+id/guardar"
-        android:layout_width="141dp"
-        android:layout_height="70dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="40dp"
-        android:contentDescription="Boton de editar"
-        android:drawableLeft="@drawable/baseline_edit_24"
-        android:drawableTint="#FFFFFF"
-        android:onClick="IraEditar"
-        android:text="@string/EditarProducto"
-        app:cornerRadius="100dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
     <TextView
         android:id="@+id/nombreproducto"
         android:layout_width="253dp"
@@ -48,6 +33,7 @@
         app:srcCompat="@drawable/articulo_foreground" />
 
     <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="341dp"
         android:layout_height="217dp"
         android:layout_marginStart="37dp"
@@ -153,5 +139,39 @@
         </LinearLayout>
 
     </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="325dp"
+        android:layout_height="206dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="47dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+
+        <Button
+            android:id="@+id/guardar"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:contentDescription="Boton de editar"
+            android:drawableLeft="@drawable/baseline_save_24"
+            android:drawableTint="#FFFFFF"
+            android:text="Guardar"
+            android:textSize="20sp"
+            app:cornerRadius="100dp" />
+
+        <Button
+            android:id="@+id/cancelar"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:contentDescription="Boton de editar"
+            android:drawableLeft="@drawable/baseline_remove_circle_outline_24"
+            android:drawableTint="#FFFFFF"
+            android:text="Eliminar"
+            android:textSize="20sp"
+            app:cornerRadius="100dp" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
