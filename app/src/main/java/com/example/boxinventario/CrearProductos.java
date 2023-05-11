@@ -4,22 +4,19 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.boxinventario.db.DBHelperproductos;
 import com.example.boxinventario.db.DBProductos;
-import com.example.boxinventario.entidades.Usuario;
 
 public class CrearProductos extends AppCompatActivity {
 
     EditText nombproducto , numcantidad , numprecio, nombcategoria, nombubicacion, numfecha ;
 
     Button btnguardar;
-    DBHelperproductos DB;
+    DBProductos DB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,9 +29,9 @@ public class CrearProductos extends AppCompatActivity {
         nombcategoria = findViewById(R.id.nombredecategoria);
         nombubicacion = findViewById(R.id.nombredeubicacion);
         numfecha = findViewById(R.id.numerodefecha);
-        btnguardar = findViewById(R.id.guardar);
+        btnguardar = findViewById(R.id.btnEditar);
 
-        DB = new DBHelperproductos(this);
+        DB = new DBProductos(this);
 
         btnguardar.setOnClickListener(new View.OnClickListener() {
             @Override

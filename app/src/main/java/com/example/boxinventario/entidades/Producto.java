@@ -17,6 +17,10 @@ public class Producto implements  Serializable, Parcelable {
     private String categoria;
     private String ubicacion;
 
+    public Producto(){
+
+    }
+
     public Producto(int id, String nameproducto, String fechaproducto, String cantidad, String precio, String categoria, String ubicacion) {
         this.id = id;
         this.nameproducto = nameproducto;

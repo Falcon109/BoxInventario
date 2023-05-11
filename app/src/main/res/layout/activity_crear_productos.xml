@@ -46,8 +46,10 @@
         app:layout_constraintTop_toBottomOf="@+id/nombreproducto">
 
         <LinearLayout
+            android:id="@+id/Enunciados"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_marginEnd="16dp"
             android:orientation="vertical">
 
             <TextView
@@ -92,24 +94,27 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="218dp"
+            android:id="@+id/editables"
+            android:layout_width="227dp"
             android:layout_height="match_parent"
             android:layout_alignParentEnd="true"
+            android:layout_marginStart="-6dp"
+            android:layout_toEndOf="@+id/Enunciados"
             android:orientation="vertical">
-
-            <EditText
-                android:id="@+id/numerodeprecio"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/PrecioProducto"
-                android:textSize="16sp"
-                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/numerodecantidad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/CantidadProducto"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/numerodeprecio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/PrecioProducto"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -152,7 +157,7 @@
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
 
         <Button
-            android:id="@+id/guardar"
+            android:id="@+id/btnEditar"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:contentDescription="Boton de editar"

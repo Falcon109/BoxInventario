@@ -97,44 +97,44 @@
             android:layout_marginEnd="39dp"
             android:orientation="vertical">
 
-            <TextView
+            <EditText
                 android:id="@+id/numerodecantidad"
                 android:layout_width="match_parent"
                 android:layout_height="43dp"
-                android:text="##"
-                android:textSize="24sp"
+                android:hint="##"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
-            <TextView
+            <EditText
                 android:id="@+id/numerodeprecio"
                 android:layout_width="match_parent"
                 android:layout_height="43dp"
-                android:text="#######"
-                android:textSize="24sp"
+                android:hint="#######"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
-            <TextView
+            <EditText
                 android:id="@+id/nombredecategoria"
                 android:layout_width="match_parent"
                 android:layout_height="43dp"
-                android:text="Otros"
-                android:textSize="24sp"
+                android:hint="Otros"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
-            <TextView
+            <EditText
                 android:id="@+id/nombredeubicacion"
                 android:layout_width="match_parent"
                 android:layout_height="43dp"
-                android:text="Otros"
-                android:textSize="24sp"
+                android:hint="Otros"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
-            <TextView
+            <EditText
                 android:id="@+id/numerodefecha"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="##-##-####"
-                android:textSize="24sp"
+                android:hint="##-##-####"
+                android:textSize="18sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -152,7 +152,7 @@
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
 
         <Button
-            android:id="@+id/guardar"
+            android:id="@+id/btnEditar"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:contentDescription="Boton de editar"

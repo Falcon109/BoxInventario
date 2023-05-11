@@ -2,7 +2,7 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cardlistas"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:animateLayoutChanges="true"
     app:cardCornerRadius="20dp"
@@ -20,6 +20,18 @@
             android:layout_height="match_parent"
             android:orientation="horizontal"
             android:padding="6dp">
+
+            <TextView
+                android:id="@+id/NameLista"
+                android:layout_width="312dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_toRightOf="@+id/iconproducto"
+                android:layout_weight="1"
+                android:text="Producto"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <ImageView
                 android:id="@+id/iconproducto"
@@ -46,115 +58,92 @@
 
             <LinearLayout
                 android:id="@+id/linearLayout"
-                android:layout_width="147dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="4dp"
-                android:layout_marginLeft="4dp"
-                android:layout_marginTop="2dp"
-                android:layout_toEndOf="@+id/iconproducto"
+                android:layout_below="@+id/NameLista"
+                android:layout_marginStart="3dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="4dp"
                 android:layout_toRightOf="@+id/iconproducto"
                 android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/NameLista"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="2dp"
-                    android:text="Producto"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/ubicacionlista"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="4dp"
-                    android:text="Ubicacion"
-                    android:textSize="16sp" />
-
-            </LinearLayout>
-
-            <RelativeLayout
-                android:layout_width="148dp"
-                android:layout_height="76dp"
-                android:layout_alignParentEnd="true"
-                android:layout_marginTop="2dp"
-                android:layout_marginEnd="6dp">
-
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="309dp"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/cantidadproducto"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="32dp"
-                        android:layout_marginRight="32dp"
+                        android:layout_marginRight="0dp"
                         android:text="Cantidad:"
                         android:textSize="14sp" />
 
                     <TextView
-                        android:id="@+id/precioproducto"
-                        android:layout_width="87dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="32dp"
-                        android:layout_marginRight="32dp"
-                        android:text="Precio:"
-                        android:textSize="14sp" />
-
-                    <TextView
-                        android:id="@+id/categoriaproducto"
-                        android:layout_width="87dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="32dp"
-                        android:layout_marginRight="32dp"
-                        android:text="Categoria:"
-                        android:textSize="14sp" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="73dp"
-                    android:layout_height="match_parent"
-                    android:layout_alignParentEnd="true"
-                    android:orientation="vertical">
-
-                    <TextView
                         android:id="@+id/numerocantidadproducto"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="16dp"
-                        android:layout_marginRight="12dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="40dp"
+                        android:layout_marginRight="0dp"
                         android:text="#"
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/precioproducto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginRight="0dp"
+                        android:text="Precio:"
+                        android:textSize="14sp" />
+
+                    <TextView
                         android:id="@+id/numeroprecioproducto"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="16dp"
-                        android:layout_marginRight="12dp"
                         android:text="###"
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/categoriaproducto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="0dp"
+                        android:text="Categoria:"
+                        android:textSize="14sp" />
+
                     <TextView
                         android:id="@+id/nombrecategoriaproducto"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="16dp"
                         android:layout_marginRight="12dp"
                         android:text="Fruta"
                         android:textSize="14sp"
                         android:textStyle="bold" />
+
                 </LinearLayout>
 
-            </RelativeLayout>
+                <TextView
+                    android:id="@+id/ubicacionlista"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ubicacion"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
 
         </RelativeLayout>
     </LinearLayout>
