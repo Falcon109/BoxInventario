@@ -11,8 +11,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.boxinventario.ApartadoArticulos;
-import com.example.boxinventario.DescipcionProductos;
+import com.example.boxinventario.clases.ApartadoArticulos;
+import com.example.boxinventario.clases.DescipcionProductos;
 import com.example.boxinventario.entidades.Producto;
 import com.example.boxinventario.R;
 

@@ -77,11 +77,13 @@
         android:layout_marginEnd="33dp"
         android:layout_marginBottom="37dp"
         android:clickable="true"
+        android:contentDescription="boton de recordatorio"
+        android:foreground="@drawable/notificaciones_foreground"
         android:foregroundGravity="center"
         android:onClick="IrRecordatorios"
-        app:backgroundTint="@color/color003"
+        android:textAlignment="center"
+        app:backgroundTint="#CB9FF8"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/notificaciones_foreground" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

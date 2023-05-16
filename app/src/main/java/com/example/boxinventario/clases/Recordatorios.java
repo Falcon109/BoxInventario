@@ -1,4 +1,4 @@
-package com.example.boxinventario;
+package com.example.boxinventario.clases;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.boxinventario.R;
 import com.example.boxinventario.adapted.AdaptadorListas;
 import com.example.boxinventario.entidades.ListaRecordatorio;
 import com.example.boxinventario.entidades.Usuario;

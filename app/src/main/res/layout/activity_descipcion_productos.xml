@@ -4,12 +4,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DescipcionProductos">
+    tools:context=".clases.DescipcionProductos">
+
+    <Button
+        android:id="@+id/btnEliminar"
+        android:layout_width="141dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="40dp"
+        android:contentDescription="Boton de eliminar"
+        android:drawableRight="@drawable/baseline_remove_circle_outline_24"
+        android:drawableTint="#FFFFFF"
+        android:onClick="IraEditar"
+        android:text="Eliminar"
+        app:cornerRadius="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnEditar"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnGuardar"
+        android:layout_width="296dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="84dp"
+        android:contentDescription="Boton de Guardar"
+        android:drawableLeft="@drawable/baseline_save_24"
+        android:drawableTint="#FFFFFF"
+        android:onClick="IraEditar"
+        android:text="Guardar"
+        app:cornerRadius="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnEditar"
         android:layout_width="141dp"
         android:layout_height="70dp"
+        android:layout_marginStart="8dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="40dp"
         android:contentDescription="Boton de editar"
@@ -19,16 +52,17 @@
         android:text="@string/EditarProducto"
         app:cornerRadius="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnEliminar" />
 
-    <TextView
+    <EditText
         android:id="@+id/nombreproducto"
-        android:layout_width="253dp"
-        android:layout_height="41dp"
+        android:layout_width="256dp"
+        android:layout_height="57dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="53dp"
-        android:text="nombre"
+        android:hint="nombre"
         android:textColor="#000000"
         android:textSize="34sp"
         android:textStyle="bold"
@@ -111,44 +145,44 @@
             android:layout_marginEnd="39dp"
             android:orientation="vertical">
 
-            <TextView
+            <EditText
                 android:id="@+id/numerodecantidad"
                 android:layout_width="match_parent"
                 android:layout_height="43dp"
-                android:text="##"
-                android:textSize="24sp"
+                android:hint="##"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
-            <TextView
+            <EditText
                 android:id="@+id/numerodeprecio"
                 android:layout_width="match_parent"
                 android:layout_height="43dp"
-                android:text="#######"
-                android:textSize="24sp"
+                android:hint="#######"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
-            <TextView
+            <EditText
                 android:id="@+id/nombredecategoria"
                 android:layout_width="match_parent"
                 android:layout_height="43dp"
-                android:text="Otros"
-                android:textSize="24sp"
+                android:hint="Otros"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
-            <TextView
+            <EditText
                 android:id="@+id/nombredeubicacion"
                 android:layout_width="match_parent"
                 android:layout_height="43dp"
-                android:text="Otros"
-                android:textSize="24sp"
+                android:hint="Otros"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
-            <TextView
+            <EditText
                 android:id="@+id/numerodefecha"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="##-##-####"
-                android:textSize="24sp"
+                android:hint="##-##-####"
+                android:textSize="20sp"
                 android:textStyle="bold" />
         </LinearLayout>
 

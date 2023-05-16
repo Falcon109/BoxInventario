@@ -5,6 +5,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.text.Editable;
 
 import androidx.annotation.Nullable;
 
@@ -21,10 +22,6 @@ public class DBProductos extends DBHelper {
         super(context);
         this.context = context;
     }
-
-    /*public void close() {
-        dbHelper.close();
-    }*/
 
     public Boolean inserProductos(String nameproducto, String fechaproducto, Integer cantidad, Integer precio, String ubicacion, String categoria){
         SQLiteDatabase db = this.getWritableDatabase();
@@ -101,14 +98,13 @@ public class DBProductos extends DBHelper {
         return producto;
     }
 
-    /*
-    public boolean editProducto(int id, Editable precio, Editable cantidad, String ubicacion) {
+    public boolean eliminarProducto(int ID) {
 
         boolean ready;
-        DbHelper dbhelper = new DbHelper(context);
+        DBHelper dbhelper = new DBHelper(context);
         this.db = dbhelper.getWritableDatabase();
         try {
-            db.execSQL("UPDATE " + TABLE_PRODUCTO + " SET precio ='" + precio + "', cantidad ='" + cantidad + "', ubicacion ='" + ubicacion + "' WHERE id_producto = '" + id + "'");
+            db.execSQL("DELETE FROM " + TABLE_PRODUCTOS + " WHERE id= '" + ID + "'");
             ready = true;
         } catch (Exception ex) {
             ex.toString();
@@ -120,13 +116,13 @@ public class DBProductos extends DBHelper {
         return ready;
     }
 
-    public boolean eliminarProducto(int id) {
+    public boolean editProducto(int ID, Editable nameproducto, Editable fechaproducto, Editable cantidad, Editable precio, Editable Ubicacion, Editable categoria) {
 
-        boolean ready;
-        DbHelper dbhelper = new DbHelper(context);
+        boolean ready = false;
+        DBHelper dbhelper = new DBHelper(context);
         this.db = dbhelper.getWritableDatabase();
         try {
-            db.execSQL("DELETE FROM " + TABLE_PRODUCTO + " WHERE id_producto='" + id + "'");
+            db.execSQL("UPDATE " + TABLE_PRODUCTOS + " SET nameproducto = '" + nameproducto+ "', fechaproducto ='" + fechaproducto + "', cantidad ='" + cantidad + "', precio ='" + precio +"', Ubicacion ='" + Ubicacion + "', categoria ='" + categoria + "' WHERE id= '" + ID + "'");
             ready = true;
         } catch (Exception ex) {
             ex.toString();
@@ -136,28 +132,6 @@ public class DBProductos extends DBHelper {
         }
 
         return ready;
-    }*/
-
-    /*
-    public Cursor fetchProducts() {
-        String[] columns = new String[] { "id","name","amount","quantity", "expiration"};
-        Cursor cursor = database.query(dbHelper.TABLE_PRODUCTOS, columns, null, null, null, null, null);
-        if (cursor != null) {
-            cursor.moveToFirst();
-        }
-        return cursor;
     }
-    public int update(long _id, String name, Integer amount, Integer quantity, String expiration) {
-        ContentValues contentValues = new ContentValues();
-        contentValues.put("name", name);
-        contentValues.put("amount", amount);
-        contentValues.put("quantity", quantity);
-        contentValues.put("expiration", expiration);
-        int i = database.update(dbHelper.TABLE_PRODUCTOS, contentValues, "ID = " + _id, null);
-        return i;
-    }
-    public void delete(long _id) {
-        database.delete(dbHelper.TABLE_PRODUCTOS, "ID = " + _id, null);
-    }*/
 
 }

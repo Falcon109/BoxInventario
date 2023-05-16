@@ -1,4 +1,4 @@
-package com.example.boxinventario;
+package com.example.boxinventario.clases;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.boxinventario.R;
 import com.example.boxinventario.db.DBProductos;
 
 public class CrearProductos extends AppCompatActivity {

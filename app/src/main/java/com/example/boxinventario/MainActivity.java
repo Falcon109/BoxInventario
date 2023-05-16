@@ -6,6 +6,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.boxinventario.clases.ApartadoArticulos;
+import com.example.boxinventario.clases.ApartadoListas;
+import com.example.boxinventario.clases.ApartadoLugarDeInteres;
+import com.example.boxinventario.clases.Recordatorios;
 import com.example.boxinventario.entidades.Usuario;
 
 public class MainActivity extends AppCompatActivity {
