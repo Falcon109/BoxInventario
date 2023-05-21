@@ -11,17 +11,18 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.boxinventario.clases.ApartadoArticulos;
-import com.example.boxinventario.clases.DescipcionProductos;
+import com.example.boxinventario.clases.Inventario;
+import com.example.boxinventario.clases.DescripcionProductos;
 import com.example.boxinventario.entidades.Producto;
 import com.example.boxinventario.R;
 
 import java.util.ArrayList;
 
-public class AdaptadorProducto extends RecyclerView.Adapter<AdaptadorProducto.MyViewHolder> {
+    public class AdaptadorProducto extends RecyclerView.Adapter<AdaptadorProducto.MyViewHolder> {
 
     private final Context context;
-    ArrayList<Producto> ProductosArrayList;
+    static ArrayList<Producto> ProductosArrayList;
+    static ArrayList<Producto> ProductosArrayListBuscador;
 
     SQLiteDatabase sqLiteDatabase;
 
@@ -50,7 +51,7 @@ public class AdaptadorProducto extends RecyclerView.Adapter<AdaptadorProducto.My
         // agregar evento de clic al ViewHolder
         holder.itemView.setOnClickListener(view -> {
             // crear Intent para abrir la nueva actividad
-            Intent intent = new Intent(context, DescipcionProductos.class);
+            Intent intent = new Intent(context, DescripcionProductos.class);
 
             // pasar información del producto seleccionado a través de los extras
             intent.putExtra("ID",producto.getId());
@@ -59,6 +60,8 @@ public class AdaptadorProducto extends RecyclerView.Adapter<AdaptadorProducto.My
             context.startActivity(intent);
         });
     }
+
+
 
 
     @Override
@@ -70,7 +73,7 @@ public class AdaptadorProducto extends RecyclerView.Adapter<AdaptadorProducto.My
         TextView Nombre , Ubicacion, Fecha, Cantidad, Precio, Categoria;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            Nombre = itemView.findViewById(R.id.NameLista);
+            Nombre = itemView.findViewById(R.id.NombreLugar);
             Fecha = itemView.findViewById(R.id.fechacompra);
             Cantidad = itemView.findViewById(R.id.numerocantidadproducto);
             Precio = itemView.findViewById(R.id.numeroprecioproducto);
@@ -79,7 +82,7 @@ public class AdaptadorProducto extends RecyclerView.Adapter<AdaptadorProducto.My
 
             itemView.setOnClickListener(view -> {
                 Context context = view.getContext();
-                Intent intent = new Intent(context, ApartadoArticulos.class);
+                Intent intent = new Intent(context, Inventario.class);
                 intent.putExtra("ID",ProductosArrayList.get(getAdapterPosition()).getId());
                 context.startActivities(new Intent[]{intent});
             });

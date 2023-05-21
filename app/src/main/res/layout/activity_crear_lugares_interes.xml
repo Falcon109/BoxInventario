@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CrearLugaresInteres">
+
+    <ImageView
+        android:id="@+id/iconproducto2"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="28dp"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/lugar_foreground" />
+
+    <EditText
+        android:id="@+id/nameubiacioninteres"
+        android:layout_width="271dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Nombre Ubicacion"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/iconproducto2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="0dp"
+        android:layout_height="238dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameubiacioninteres">
+
+        <LinearLayout
+            android:id="@+id/Editables"
+            android:layout_width="215dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="7dp"
+            android:layout_marginEnd="-6dp"
+            android:layout_toEndOf="@+id/Titulos"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/enlacedelugar"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:hint="Enlace"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/puntajedelLugar"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:layout_alignParentEnd="true"
+                android:hint="N°"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Titulos"
+            android:layout_width="163dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/ubicacionlista3"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:text="Enlace del lugar: "
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/ubicacionlista4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="10dp"
+                android:text="Calificacion del lugar (del 1 al 10): "
+                android:textSize="16sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="159dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginBottom="68dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2">
+
+        <Button
+            android:id="@+id/btnGuardarLugar"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:contentDescription="Boton de editar"
+            android:drawableTint="#FFFFFF"
+            android:text="@string/GuardarProducto"
+            android:textSize="20sp"
+            app:cornerRadius="100dp" />
+
+        <Button
+            android:id="@+id/cancelarLugar"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:contentDescription="Boton de editar"
+            android:drawableTint="#FFFFFF"
+            android:onClick="Cancelar"
+            android:text="@string/CancelarProducto"
+            android:textSize="20sp"
+            app:cornerRadius="100dp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

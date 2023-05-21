@@ -7,16 +7,12 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DBHelper extends SQLiteOpenHelper {
 
-
-    private static final int DATABASE_VERSION = 7;
+    private static final int DATABASE_VERSION = 21;
     private static final String DATABASE_NAME = "productos.db";
-
-    //private static final String CREATE_TABLE = "CREATE TABLE type (id INTEGER PRIMARY KEY, nameproducto TEXT, fechaproducto TEXT, cantidad INTEGER, Ubicacion TEXT, categoria TEXT, precio INTEGER)";
     public String TABLE_PRODUCTOS = "t_productos";
     public String TABLE_LISTAS = "t_listas";
     public String TABLE_UBICACION = "t_ubicacion";
     public String TABLE_RECORDATORIO = "t_recordatorio";
-
     public DBHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
@@ -36,10 +32,12 @@ public class DBHelper extends SQLiteOpenHelper {
         db.execSQL("CREATE TABLE "+ TABLE_LISTAS + "(" +
                 "id_listas INTEGRE PRIMARY KEY,"+
                 "nombre_lista TEXT NOT NULL," +
-                "cantidad INTEGRE NOT NULL)");
+                "id_producto INTEGRE NOT NULL," +
+                "cantidad_producto TEXT NOT NULL)");
 
         db.execSQL("CREATE TABLE "+ TABLE_UBICACION + "(" +
                 "id_ubicacion INTEGER PRIMARY KEY AUTOINCREMENT,"+
+                "nombre_lugar TEXT NOT NULL,"+
                 "link_ubicacion TEXT NOT NULL,"+
                 "puntaje INTEGER NOT NULL)");
 
@@ -47,7 +45,6 @@ public class DBHelper extends SQLiteOpenHelper {
                 "id_recordatorio INTEGER PRIMARY KEY AUTOINCREMENT,"+
                 "fecha TEXT NOT NULL,"+
                 "Estado TEXT NOT NULL)");
-
     }
 
 
@@ -59,12 +56,6 @@ public class DBHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE "+this.TABLE_RECORDATORIO);
 
         onCreate(db);
-    }
-
-    public Cursor getdata(){
-        SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor = db.rawQuery("Select * from TABLE_PRODUCTOS",null);
-        return cursor;
     }
 
 }

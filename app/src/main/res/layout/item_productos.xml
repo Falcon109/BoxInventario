@@ -22,7 +22,7 @@
             android:padding="6dp">
 
             <TextView
-                android:id="@+id/NameLista"
+                android:id="@+id/NombreLugar"
                 android:layout_width="312dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="2dp"
@@ -60,7 +60,7 @@
                 android:id="@+id/linearLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/NameLista"
+                android:layout_below="@+id/NombreLugar"
                 android:layout_marginStart="3dp"
                 android:layout_marginLeft="3dp"
                 android:layout_marginTop="4dp"

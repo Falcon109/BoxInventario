@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.boxinventario.clases.ApartadoArticulos;
+import com.example.boxinventario.clases.Inventario;
 import com.example.boxinventario.clases.ApartadoListas;
 import com.example.boxinventario.clases.ApartadoLugarDeInteres;
 import com.example.boxinventario.clases.Recordatorios;
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
     //Metodo para ir a articulos
     public void IrArticulos(View clic1) {
-        Intent IrArticulos = new Intent(this, ApartadoArticulos.class);
+        Intent IrArticulos = new Intent(this, Inventario.class);
         startActivity(IrArticulos);
     }
 

@@ -18,7 +18,7 @@ import com.example.boxinventario.db.DBHelper;
 import com.example.boxinventario.db.DBProductos;
 import com.example.boxinventario.entidades.Producto;
 
-public class DescipcionProductos extends AppCompatActivity {
+public class DescripcionProductos extends AppCompatActivity {
 
     private int IDproducto;
     private SQLiteDatabase DB;
@@ -111,7 +111,7 @@ public class DescipcionProductos extends AppCompatActivity {
                     Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
 
                     if (ready[0]){
-                        Toast.makeText(DescipcionProductos.this, "Modificacion realizada", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(DescripcionProductos.this, "Modificacion realizada", Toast.LENGTH_SHORT).show();
                         nombreprod.setEnabled(false);
                         numrcantidad.setEnabled(false);
                         numrprecio.setEnabled(false);
@@ -122,7 +122,7 @@ public class DescipcionProductos extends AppCompatActivity {
                         btnEditar.setVisibility(View.VISIBLE);
                         btnEliminar.setVisibility(View.VISIBLE);
                     }else {
-                        Toast.makeText(DescipcionProductos.this, "Error al modificar su Producto", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(DescripcionProductos.this, "Error al modificar su Producto", Toast.LENGTH_SHORT).show();
                         nombreprod.setEnabled(false);
                         numrcantidad.setEnabled(false);
                         numrprecio.setEnabled(false);
@@ -134,7 +134,7 @@ public class DescipcionProductos extends AppCompatActivity {
                         btnEliminar.setVisibility(View.VISIBLE);
                     }
                 }else {
-                    Toast.makeText(DescipcionProductos.this, "DEBE LLENAR LOS CAMPOS OBLIGATORIOS", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(DescripcionProductos.this, "DEBE LLENAR LOS CAMPOS OBLIGATORIOS", Toast.LENGTH_SHORT).show();
                     nombreprod.setEnabled(false);
                     numrcantidad.setEnabled(false);
                     numrprecio.setEnabled(false);
@@ -153,7 +153,7 @@ public class DescipcionProductos extends AppCompatActivity {
 
         btnEliminar.setOnClickListener(v -> {
 
-            AlertDialog.Builder builder = new AlertDialog.Builder(DescipcionProductos.this);
+            AlertDialog.Builder builder = new AlertDialog.Builder(DescripcionProductos.this);
             builder.setMessage("¿Desea eliminar este producto?").setPositiveButton("Si", (dialog, i) -> {
                 if(dbProductos.eliminarProducto(id)){
                     lista();
@@ -164,7 +164,7 @@ public class DescipcionProductos extends AppCompatActivity {
         });
     }
     private void lista() {
-        Intent intent = new Intent(this, ApartadoArticulos.class);
+        Intent intent = new Intent(this, Inventario.class);
         startActivity(intent);
     }
 }

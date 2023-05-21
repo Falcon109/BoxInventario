@@ -12,19 +12,43 @@
         android:theme="@style/Theme.BoxInventario"
         tools:targetApi="31">
         <activity
+            android:name=".DescripcionLugares"
+            android:exported="false"
+            android:parentActivityName=".clases.ApartadoLugarDeInteres">
+            <meta-data
+                android:name="android.suport.PARENT_ACTIVITY"
+                android:value="ApartadoLugarDeInteres" />
+        </activity>
+        <activity
+            android:name=".CrearLugaresInteres"
+            android:exported="false"
+            android:parentActivityName=".clases.ApartadoLugarDeInteres">
+            <meta-data
+            android:name="android.suport.PARENT_ACTIVITY"
+            android:value="ApartadoLugarDeInteres" />
+        </activity>
+        <activity
+            android:name=".clases.CrearListas"
+            android:exported="false"
+            android:parentActivityName=".clases.ApartadoListas">
+            <meta-data
+                android:name="android.suport.PARENT_ACTIVITY"
+                android:value="ApartadoListas" />
+        </activity>
+        <activity
             android:name=".clases.CrearProductos"
             android:exported="false"
             android:label="@string/CrearProducto"
-            android:parentActivityName=".clases.ApartadoArticulos">
+            android:parentActivityName=".clases.Inventario">
             <meta-data
-            android:name="android.suport.PARENT_ACTIVITY"
-            android:value="ApartadoArticulos" />
+                android:name="android.suport.PARENT_ACTIVITY"
+                android:value="ApartadoArticulos" />
         </activity>
         <activity
-            android:name=".clases.DescipcionProductos"
+            android:name=".clases.DescripcionProductos"
             android:exported="false"
             android:label="@string/DescripcionProducto"
-            android:parentActivityName=".clases.ApartadoArticulos">
+            android:parentActivityName=".clases.Inventario">
             <meta-data
                 android:name="android.suport.PARENT_ACTIVITY"
                 android:value="ApartadoArticulos" />
@@ -73,7 +97,7 @@
                 android:value="MainActivity" />
         </activity>
         <activity
-            android:name=".clases.ApartadoArticulos"
+            android:name=".clases.Inventario"
             android:exported="false"
             android:label="@string/VentanaArticulos"
             android:parentActivityName=".MainActivity">

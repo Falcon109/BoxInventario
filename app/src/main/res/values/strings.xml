@@ -3,8 +3,10 @@
 
     <string name="TituloMenu">Menu</string>
 
+    <string name="MensajeBienvenida1">Bienvenidos</string>
+    <string name="MensajeBienvenida2">Esta aplicacion tiene como intencio ayudarle a gestionar sus compras y sus articulos</string>
     <string name="Articulos">Articulos</string>
-    <string name="Listas">Listas</string>
+    <string name="Listas">Listas de compras</string>
     <string name="Lugaresinteres">Lugares de interes</string>
     <string name="Recordatorios"></string>
 

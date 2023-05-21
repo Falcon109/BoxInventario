@@ -65,7 +65,7 @@ public class CrearProductos extends AppCompatActivity {
     }
 
     public void Cancelar(View clic) {
-        Intent Cancelar = new Intent(this, ApartadoArticulos.class);
+        Intent Cancelar = new Intent(this, Inventario.class);
         startActivity(Cancelar);
     }
 }

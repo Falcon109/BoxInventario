@@ -8,32 +8,33 @@
     android:background="@color/white"
     tools:context=".MainActivity">
 
-    <ImageButton
-        android:id="@+id/imageButton4"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="#0075644B"
-        android:contentDescription="Usuario"
-        android:onClick="IrUsuario"
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/MensajeBienvenida1"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.098"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/usuario_foreground" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="344dp"
-        android:layout_height="366dp"
-        android:layout_marginStart="17dp"
-        android:layout_marginEnd="17dp"
+        android:layout_width="0dp"
+        android:layout_height="232dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.328">
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.0">
 
         <Button
             android:id="@+id/articulos"
@@ -72,10 +73,10 @@
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton"
-        android:layout_width="63dp"
+        android:layout_width="0dp"
         android:layout_height="63dp"
-        android:layout_marginEnd="33dp"
-        android:layout_marginBottom="37dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="40dp"
         android:clickable="true"
         android:contentDescription="boton de recordatorio"
         android:foreground="@drawable/notificaciones_foreground"
@@ -85,5 +86,17 @@
         app:backgroundTint="#CB9FF8"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/MensajeBienvenida2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

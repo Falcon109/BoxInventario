@@ -15,4 +15,9 @@ public class ApartadoListas extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apartado_lista);
     }
+
+    public void Crearlistadecompras(View clic) {
+        Intent CrearListas = new Intent(this, com.example.boxinventario.clases.CrearListas.class);
+        startActivity(CrearListas);
+    }
 }
